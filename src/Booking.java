@@ -19,11 +19,19 @@ public class Booking {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Room number: ").append(room.getNumber()).append(" From: ").append(fromDate).append(" To: ").append(toDate).append(" Guests: ");
+        sb.append("Room number: ")
+                .append(room.getNumber())
+                .append(" From: ")
+                .append(fromDate)
+                .append(" To: ")
+                .append(toDate)
+                .append(" Guests: ");
         for (Guest guest : guests) {
-            sb.append(guest.toString()).append(", ");
+            sb.append(guest.toString())
+                    .append(", ");
         }
-        sb.append("Type of Vacation: ").append(typeOfVacation);
+        sb.append("Type of Vacation: ")
+                .append(typeOfVacation);
         return sb.toString();
     }
 

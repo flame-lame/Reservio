@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println();
         // Guests -->
         Guest guestFirst = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
         Guest guestSecond = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
@@ -40,7 +41,7 @@ public class Main {
         bookingManager.addBooking(bookingSecondOrder);
 
         // Booking manager -->
-        System.out.println("---");
+        System.out.println("---> All bookings");
         bookingManager.printAllBookings();
 
     }

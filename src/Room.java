@@ -24,19 +24,4 @@ public class Room {
         return number;
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public boolean isBalcony() {
-        return balcony;
-    }
-
-    public boolean isSeaView() {
-        return seaView;
-    }
-
-    public double getPrice() {
-        return price;
-    }
 }
