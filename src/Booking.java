@@ -1,5 +1,8 @@
 import java.time.LocalDate;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
+import java.lang.String;
+
 
 public class Booking {
     private Room room;
@@ -7,6 +10,7 @@ public class Booking {
     private LocalDate fromDate;
     private LocalDate toDate;
     private String typeOfVacation;
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     public Booking(Room room, List<Guest> guests, LocalDate fromDate, LocalDate toDate, String typeOfVacation) {
         this.room = room;
@@ -18,13 +22,17 @@ public class Booking {
 
     @Override
     public String toString() {
+
+        LocalDateTransform dateTransformFrom = new LocalDateTransform(fromDate, formatter);
+        LocalDateTransform dateTransformTo = new LocalDateTransform(toDate, formatter);
+
         StringBuilder sb = new StringBuilder();
         sb.append("Room number: ")
                 .append(room.getNumber())
                 .append(" From: ")
-                .append(fromDate)
+                .append(dateTransformFrom.getFormattedDate())
                 .append(" To: ")
-                .append(toDate)
+                .append(dateTransformTo.getFormattedDate())
                 .append(" Guests: ");
         for (Guest guest : guests) {
             sb.append(guest.toString())
