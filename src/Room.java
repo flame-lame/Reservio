@@ -5,9 +5,9 @@ public class Room {
     private int capacity;
     private boolean balcony;
     private boolean seaView;
-    private BigDecimal price;
+    private double price;
 
-    public Room(int number, int capacity, boolean balcony, boolean seaView, BigDecimal price) {
+    public Room(int number, int capacity, boolean balcony, boolean seaView, double price) {
         this.number = number;
         this.capacity = capacity;
         this.balcony = balcony;
@@ -17,7 +17,7 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room: " + number + ", " + capacity + ", " + balcony + ", " + seaView + ", " + price;
+        return "No. " + number + ", Capacity: " + capacity + ", Balcony: " + balcony + ", Sea view: " + seaView + ", Price per night (CZK)" + price;
     }
 
     public int getNumber() {
@@ -36,7 +36,7 @@ public class Room {
         return seaView;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 }

@@ -1,26 +1,30 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Booking {
-    private int bookingID;
-    private LocalDate bookingDateStart;
-    private LocalDate bookingDateEnd;
+    private Room room;
+    private List<Guest> guests;
+    private LocalDate fromDate;
+    private LocalDate toDate;
+    private String typeOfVacation;
 
-    public Booking(int bookingID , LocalDate bookingDateStart, LocalDate bookingDateEnd) {
-        this.bookingID = bookingID;
-        this.bookingDateStart = bookingDateStart;
-        this.bookingDateEnd = bookingDateEnd;
+    public Booking(Room room, List<Guest> guests, LocalDate fromDate, LocalDate toDate, String typeOfVacation) {
+        this.room = room;
+        this.guests = guests;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.typeOfVacation = typeOfVacation;
     }
 
-    public int getBookingID() {
-        return bookingID;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Room number: ").append(room.getNumber()).append(" From: ").append(fromDate).append(" To: ").append(toDate).append(" Guests: ");
+        for (Guest guest : guests) {
+            sb.append(guest.toString()).append(", ");
+        }
+        sb.append("Type of Vacation: ").append(typeOfVacation);
+        return sb.toString();
     }
 
-    public LocalDate getBookingDateStart() {
-        return bookingDateStart;
-    }
-
-    public LocalDate getBookingDateEnd() {
-        return bookingDateEnd;
-    }
 }

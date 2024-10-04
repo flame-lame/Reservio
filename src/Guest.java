@@ -13,7 +13,7 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Guest: " + name + ", " + surname + ", " + birthDate;
+        return name + " " + surname + " (" + birthDate + ")";
     }
 
     public String getName() {
