@@ -17,7 +17,7 @@ public class Room {
 
     @Override
     public String toString() {
-        return "No. " + number + ", Capacity: " + capacity + ", Balcony: " + balcony + ", Sea view: " + seaView + ", Price per night (CZK)" + price;
+        return "No. " + number + ", Capacity: " + capacity + ", Balcony: " + balcony + ", Sea view: " + seaView + ", Price per night (CZK): " + price;
     }
 
     public int getNumber() {

@@ -35,4 +35,11 @@ public class Booking {
         return sb.toString();
     }
 
+    public LocalDate getFromDate() {
+        return fromDate;
+    }
+
+    public LocalDate getToDate() {
+        return toDate;
+    }
 }

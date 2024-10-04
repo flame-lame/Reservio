@@ -1,11 +1,13 @@
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
+import java.lang.String;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println();
+
         // Guests -->
         Guest guestFirst = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
         Guest guestSecond = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
@@ -44,5 +46,32 @@ public class Main {
         System.out.println("---> All bookings");
         bookingManager.printAllBookings();
 
+        // Date transformation Guest birthday
+        System.out.println("---> Local date transformation");
+
+        LocalDateTransform dateTransformGuestFirst = new LocalDateTransform(guestFirst.getBirthDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        LocalDateTransform dateTransformGuestSecond = new LocalDateTransform(guestSecond.getBirthDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        System.out.println("Adéla birthday transformation to our type: " + dateTransformGuestFirst.getFormattedDate());
+        System.out.println("Jan birthday transformation to our type: " + dateTransformGuestSecond.getFormattedDate());
+
+        // Date transformation Room reservation
+        System.out.println("---> Room reservation transformation");
+
+        LocalDateTransform dateTransformReservationFromRoomOne = new LocalDateTransform(bookingFirstOrder.getFromDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        LocalDateTransform dateTransformReservationToRoomOne = new LocalDateTransform(bookingFirstOrder.getToDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        LocalDateTransform dateTransformReservationFromRoomTwo = new LocalDateTransform(bookingSecondOrder.getFromDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        LocalDateTransform dateTransformReservationToRoomTwo = new LocalDateTransform(bookingSecondOrder.getToDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+
+        System.out.println("Room One reservation for Adéla: " + dateTransformReservationFromRoomOne.getFormattedDate() + " - " + dateTransformReservationToRoomOne.getFormattedDate());
+        System.out.println("Room Three reservation for Adéla and Jan: " + dateTransformReservationFromRoomTwo.getFormattedDate() + " - " + dateTransformReservationToRoomTwo.getFormattedDate());
+
+
+        //System.out.println("Adéla's reservation date: " + dateTransformGReservationFromGuestFirstFrom.getFormattedDate() + " - " + dateTransformGReservationFromGuestFirstTo.getFormattedDate());
+
+
     }
+
 }
