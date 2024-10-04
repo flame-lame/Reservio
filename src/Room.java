@@ -1,5 +1,3 @@
-import java.math.BigDecimal;
-
 public class Room {
     private int number;
     private int capacity;
