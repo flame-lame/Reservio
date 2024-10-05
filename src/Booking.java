@@ -15,32 +15,13 @@ public class Booking {
     public Booking(Room room, List<Guest> guests, LocalDate fromDate, LocalDate toDate, String typeOfVacation) {
         this.room = room;
         this.guests = guests;
+        this.typeOfVacation = typeOfVacation;
+
+        if (fromDate == null || toDate == null) {
+            throw new IllegalArgumentException("Dates cannot be null");
+        }
         this.fromDate = fromDate;
         this.toDate = toDate;
-        this.typeOfVacation = typeOfVacation;
-    }
-
-    @Override
-    public String toString() {
-
-        LocalDateTransform dateTransformFrom = new LocalDateTransform(fromDate, formatter);
-        LocalDateTransform dateTransformTo = new LocalDateTransform(toDate, formatter);
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("Room number: ")
-                .append(room.getNumber())
-                .append(" From: ")
-                .append(dateTransformFrom.getFormattedDate())
-                .append(" To: ")
-                .append(dateTransformTo.getFormattedDate())
-                .append(" Guests: ");
-        for (Guest guest : guests) {
-            sb.append(guest.toString())
-                    .append(", ");
-        }
-        sb.append("Type of Vacation: ")
-                .append(typeOfVacation);
-        return sb.toString();
     }
 
     public LocalDate getFromDate() {
@@ -50,4 +31,16 @@ public class Booking {
     public LocalDate getToDate() {
         return toDate;
     }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    @Override
+    public String toString() {
+        LocalDateTransform dateFrom = new LocalDateTransform(fromDate, formatter);
+        LocalDateTransform dateTo = new LocalDateTransform(toDate, formatter);
+        return "Room nmb:  " + room + ", Guests: " + guests + ", From: " + dateFrom.getFormattedDate() + ", To: " + dateTo.getFormattedDate() + ", Type of Vacation: " + typeOfVacation;
+    }
+
 }

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f98612c-7afd-4071-82e4-41f32862fa47" name="Changes" comment="Initial testing v1.2">
+    <list default="true" id="7f98612c-7afd-4071-82e4-41f32862fa47" name="Changes" comment="Initial testing v2.1&#10;&#10;Final version cleaning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookingManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -81,7 +82,8 @@
       <updated>1728012468664</updated>
       <workItem from="1728012469764" duration="17746000" />
       <workItem from="1728038824248" duration="95000" />
-      <workItem from="1728038988106" duration="6327000" />
+      <workItem from="1728038988106" duration="9590000" />
+      <workItem from="1728049500962" duration="11399000" />
     </task>
     <task id="LOCAL-00001" summary="Initial testing v0.1">
       <option name="closed" value="true" />
@@ -115,7 +117,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728043430742</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial testing v2.0&#10;&#10;Final version">
+      <option name="closed" value="true" />
+      <created>1728045553286</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728045553286</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Initial testing v2.1&#10;&#10;Final version cleaning">
+      <option name="closed" value="true" />
+      <created>1728046024113</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728046024113</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +144,9 @@
     <MESSAGE value="Initial testing v1.0" />
     <MESSAGE value="Initial testing v1.1" />
     <MESSAGE value="Initial testing v1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial testing v1.2" />
+    <MESSAGE value="Initial testing v2.0&#10;&#10;Final version" />
+    <MESSAGE value="Initial testing v2.1&#10;&#10;Final version cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial testing v2.1&#10;&#10;Final version cleaning" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
