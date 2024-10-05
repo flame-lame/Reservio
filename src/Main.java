@@ -55,14 +55,14 @@ public class Main {
         thirdOrder.add(guestThird);
         Booking bookingThirdOrder = new Booking(roomThree, thirdOrder, LocalDate.of(2024, 3,19), LocalDate.of(2024,3,26), "Tourist");
 
-        extract2(bookingManager, thirdOrder, bookingThirdOrder);
+        extracted2(bookingManager, bookingThirdOrder, thirdOrder);
 
         // Booking manager -->
         System.out.println("---> All bookings");
         bookingManager.printAllBookings();
     }
 
-    private static void extract2(BookingManager bookingManager, List<Guest> thirdOrder, Booking bookingThirdOrder) {
+    private static void extracted2(BookingManager bookingManager, Booking bookingThirdOrder, List<Guest> thirdOrder) {
         if (bookingManager.isAvailable(bookingThirdOrder.getRoom(), bookingThirdOrder.getFromDate(), bookingThirdOrder.getToDate())) {
             LocalDateTransform thirdOrderFromDate = new LocalDateTransform(bookingThirdOrder.getFromDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
             LocalDateTransform thirdOrderToDate = new LocalDateTransform(bookingThirdOrder.getToDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
@@ -74,10 +74,24 @@ public class Main {
     }
 
     private static void extracted1(BookingManager bookingManager, Booking bookingSecondOrder, List<Guest> secondOrder) {
-        extract2(bookingManager, secondOrder, bookingSecondOrder);
+        if (bookingManager.isAvailable(bookingSecondOrder.getRoom(), bookingSecondOrder.getFromDate(), bookingSecondOrder.getToDate())) {
+            LocalDateTransform secondOrderFromDate = new LocalDateTransform(bookingSecondOrder.getFromDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+            LocalDateTransform secondOrderToDate = new LocalDateTransform(bookingSecondOrder.getToDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+            bookingManager.addBooking(bookingSecondOrder);
+            System.out.println("Enjoy your vacation! " + secondOrder.getFirst() + " - " + secondOrderFromDate.getFormattedDate() + " - " + secondOrderToDate.getFormattedDate());
+        } else {
+            System.out.println("Its booked, please choose another dates.");
+        }
     }
 
     private static void extracted(BookingManager bookingManager, Booking bookingFirstOrder, List<Guest> firstOrder) {
-        extract2(bookingManager, firstOrder, bookingFirstOrder);
+        if (bookingManager.isAvailable(bookingFirstOrder.getRoom(), bookingFirstOrder.getFromDate(), bookingFirstOrder.getToDate())) {
+            LocalDateTransform firstOrderFromDate = new LocalDateTransform(bookingFirstOrder.getFromDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+            LocalDateTransform firstOrderToDate = new LocalDateTransform(bookingFirstOrder.getToDate(), DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+            bookingManager.addBooking(bookingFirstOrder);
+            System.out.println("Enjoy your vacation! " + firstOrder.getFirst() + " - " + firstOrderFromDate.getFormattedDate() + " - " + firstOrderToDate.getFormattedDate());
+        } else {
+            System.out.println("Its booked, please choose another dates.");
+        }
     }
 }

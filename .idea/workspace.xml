@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f98612c-7afd-4071-82e4-41f32862fa47" name="Changes" comment="Initial testing v2.1&#10;&#10;Final version cleaning">
+    <list default="true" id="7f98612c-7afd-4071-82e4-41f32862fa47" name="Changes" comment="Initial testing v3.0&#10;&#10;Additive tasks:&#10;- reservation check&#10;- rework publish all bookings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookingManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1728012469764" duration="17746000" />
       <workItem from="1728038824248" duration="95000" />
       <workItem from="1728038988106" duration="9590000" />
-      <workItem from="1728049500962" duration="11399000" />
+      <workItem from="1728049500962" duration="12097000" />
     </task>
     <task id="LOCAL-00001" summary="Initial testing v0.1">
       <option name="closed" value="true" />
@@ -133,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728046024113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Initial testing v3.0&#10;&#10;Additive tasks:&#10;- reservation check&#10;- rework publish all bookings">
+      <option name="closed" value="true" />
+      <created>1728106239539</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728106239539</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +152,8 @@
     <MESSAGE value="Initial testing v1.2" />
     <MESSAGE value="Initial testing v2.0&#10;&#10;Final version" />
     <MESSAGE value="Initial testing v2.1&#10;&#10;Final version cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial testing v2.1&#10;&#10;Final version cleaning" />
+    <MESSAGE value="Initial testing v3.0&#10;&#10;Additive tasks:&#10;- reservation check&#10;- rework publish all bookings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial testing v3.0&#10;&#10;Additive tasks:&#10;- reservation check&#10;- rework publish all bookings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
