@@ -18,8 +18,4 @@ public class Room {
         return "No. " + number + ", Capacity: " + capacity + ", Balcony: " + balcony + ", Sea view: " + seaView + ", Price per night (CZK): " + price;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
 }
